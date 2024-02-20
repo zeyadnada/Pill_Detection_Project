@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pills', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('phone')->unique();
+            $table->string('photo')->unique();
             $table->string('description');
             $table->timestamps();
         });
