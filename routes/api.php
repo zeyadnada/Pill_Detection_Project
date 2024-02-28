@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\api\PillController;
+use App\Http\Controllers\api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/login', [UserController::class, 'login']);
+
+Route::post('/register', [UserController::class, 'register']);
+
+Route::group(['middleware' => 'MyAuthApi'], function () {
+    Route::get('/detection', [PillController::class, 'pillDetectionData']);
+    Route::post('/userphoto', [UserController::class, 'uploadUserPhoto']);
+    Route::post('/userpersonalinformation', [UserController::class, 'updatePersonalInformation']);
+    Route::get('/profile', [UserController::class, 'profile']);
+    Route::get('/logout', [UserController::class, 'logout']);
 });
