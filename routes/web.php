@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\user\DetectionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.index');
+});
+
+
+
+Route::group(['prefix' => 'detection', 'as' => 'detection.'], function () {
+    route::get('/index', [DetectionController::class, 'index'])->name('index');
 });
