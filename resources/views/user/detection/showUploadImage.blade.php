@@ -1,9 +1,8 @@
 @extends('user.layouts.parent')
 
-@section('title', 'Pill detection')
+@section('title', 'Pill Detection')
 
 @section('content')
-
     <br>
     <br>
     <br>
@@ -25,11 +24,4 @@
     <button class="cancelButton text-center mt-4">
         <a id="cancelButton"> Cancel </a>
     </button>
-
-@endsection
-
-@section('js')
-    <script src="./BST5/js/bootstrap.bundle.js"></script>
-    <script src="script.js"></script>
-
 @endsection

@@ -11,4 +11,29 @@ class DetectionController extends Controller
     {
         return view('user.detection.showUploadImage');
     }
+
+
+    public function makeDetection()
+    {
+        //rest of code
+        return view('user.detection.show');
+    }
+
+    public function contraindications()
+    {
+        //rest of code
+        return view('user.detection.contraindications');
+    }
+
+    public function sideEffects()
+    {
+        //rest of code
+        return view('user.detection.sideEffects');
+    }
+
+    public function dosage()
+    {
+        //rest of code
+        return view('user.detection.dosage');
+    }
 }

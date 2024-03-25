@@ -4,9 +4,9 @@
 
 @section('content')
 
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
     <h1 style="margin-left: 32rem">Explore our services</h1>
     <p style="margin-left: 31rem; color: rgba(92, 91, 91, 1)">
         The system provide services in the following area
@@ -28,7 +28,7 @@
                         <p class="card-text" style="margin-top: auto">
                             <strong>Pill Detection</strong>
                         </p>
-                        <a href="login.html" class="btn btn-view"
+                        <a href="{{ route('detection.index') }}" class="btn btn-view"
                             style="
               background-color: #77ab9c;
               font-weight: bold;
@@ -56,7 +56,7 @@
                         <p class="card-text" style="margin-top: auto">
                             <strong>Pill Interaction</strong>
                         </p>
-                        <a href="login.html" class="btn btn-view"
+                        <a href="{{ route('interaction.index') }}" class="btn btn-view"
                             style="
               background-color: #77ab9c;
               font-weight: bold;
@@ -85,7 +85,7 @@
                         <p class="card-text" style="margin-top: auto">
                             <strong>View Blogs</strong>
                         </p>
-                        <a href="blog.html" class="btn btn-view"
+                        <a href="{{ route('blog.index') }}" class="btn btn-view"
                             style="
               background-color: #77ab9c;
               font-weight: bold;
