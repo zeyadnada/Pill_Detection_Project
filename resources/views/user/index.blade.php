@@ -7,7 +7,7 @@
     <br>
     <br>
     <br>
-    <h1 style="margin-left: 32rem">Explore our services</h1>
+    <h1 style="margin-left: 32rem">Explore our services {{ session('name') }}</h1>
     <p style="margin-left: 31rem; color: rgba(92, 91, 91, 1)">
         The system provide services in the following area
     </p>
