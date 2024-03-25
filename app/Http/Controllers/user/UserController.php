@@ -24,7 +24,7 @@ class UserController extends Controller
             // Authentication passed
             // dd($user);
             session(['login' => true, 'id' => $user->id, 'name' => $user->name]);
-            return redirect('/index');
+            return redirect('/');
         } else {
             // Authentication failed
             return redirect('/login')->with(['message' => 'Wrong email or password'])->withInput();

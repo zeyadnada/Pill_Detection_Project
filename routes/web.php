@@ -34,7 +34,7 @@ route::group(['middleware' => 'myGust'], function () {
     route::post('/register', [UserController::class, 'register'])->name('register');
 });
 route::group(['middleware' => 'myAuth'], function () {
-    
+
     Route::get('/', function () {
         return view('user.index');
     });
@@ -44,7 +44,7 @@ route::group(['middleware' => 'myAuth'], function () {
 
     Route::group(['prefix' => 'detection', 'as' => 'detection.'], function () {
         route::get('/index', [DetectionController::class, 'index'])->name('index');
-        route::get('/make', [DetectionController::class, 'makeDetection'])->name('make');
+        route::post('/make', [DetectionController::class, 'makeDetection'])->name('make');
         route::get('/dosage', [DetectionController::class, 'dosage'])->name('dosage');
     });
 

@@ -440,7 +440,7 @@ body {
   /* padding: 70px;*/
   gap: 5px;
   margin-left: 37rem;
-  background-image: url(/images/browse_pill.png);
+  background-image: url(/img/browse_pill.png);
   filter: brightness(0.8);
 }
 
